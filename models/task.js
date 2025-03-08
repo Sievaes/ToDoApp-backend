@@ -8,9 +8,9 @@ const subTaskSchema = new mongoose.Schema({
 const taskSchema = new mongoose.Schema({
   task: { type: String, required: true },
   description: { type: String },
-  priority: { type: String },
-  createdAt: { type: String, default: Date.now },
-  updatedAt: { type: String, default: Date.now },
+  priority: { type: Number },
+  createdAt: { type: Number, default: Date.now },
+  updatedAt: { type: Number, default: Date.now },
   completed: { type: Boolean, default: false },
   subTasks: [subTaskSchema],
 })
@@ -19,7 +19,15 @@ taskSchema.set("toJSON", {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
-    delete returnedObject._v
+    delete returnedObject.__v
+
+    if (returnedObject.subTasks) {
+      returnedObject.subTasks = returnedObject.subTasks.map((subTask) => {
+        subTask.id = subTask._id.toString()
+        delete subTask._id
+        return subTask
+      })
+    }
   },
 })
 

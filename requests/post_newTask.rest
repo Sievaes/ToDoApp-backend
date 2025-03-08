@@ -1,0 +1,20 @@
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+
+
+{
+    "task": "test task",
+    "description": "test description",
+    "priority": "low",
+    "completed": false,
+    "subTasks": [
+        {
+            "task": "test subTask",
+            "completed": false
+        },
+        {
+        "task": "test subTask2",
+        "completed": false
+        }
+    ]
+}

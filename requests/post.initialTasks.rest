@@ -1,0 +1,83 @@
+POST http://localhost:3001/api/tasks/init
+Content-Type: application/json
+
+[
+  {
+    "task": "Home cleaning",
+    "description": "Weekly cleaning",
+    "priority": 3,
+    "completed": false,
+    "subTasks": [
+      { "task": "Vacuum living room", "completed": false },
+      { "task": "Dust shelves", "completed": false }
+    ]
+  },
+  {
+    "task": "Grocery shopping",
+    "description": "Buy groceries for the week",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+      { "task": "Buy vegetables", "completed": false },
+      { "task": "Buy fruits", "completed": false }
+    ]
+  },
+  {
+    "task": "Project meeting",
+    "description": "Discuss project milestones",
+    "priority": 2,
+    "completed": false,
+    "subTasks": [
+      { "task": "Prepare presentation", "completed": false },
+      { "task": "Send meeting invite", "completed": false }
+    ]
+  },
+  {
+    "task": "Car maintenance",
+    "description": "Routine car maintenance",
+    "priority": 2,
+    "completed": false,
+    "subTasks": [
+      { "task": "Change oil", "completed": false },
+      { "task": "Check tire pressure", "completed": false }
+    ]
+  },
+  {
+    "task": "Workout",
+    "description": "Daily workout routine",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+      { "task": "Warm-up exercises", "completed": false },
+      { "task": "Strength training", "completed": false }
+    ]
+  },
+  {
+    "task": "Read a book",
+    "description": "Read a new book",
+    "priority": 3,
+    "completed": false,
+    "subTasks": [
+
+    ]
+  },
+  {
+    "task": "Gardening",
+    "description": "Work in the garden",
+    "priority": 2,
+    "completed": false,
+    "subTasks": [
+      { "task": "Plant new flowers", "completed": false },
+      { "task": "Water the plants", "completed": false }
+    ]
+  },
+  {
+    "task": "Study for exams",
+    "description": "Prepare for upcoming exams",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+
+    ]
+  }
+]
