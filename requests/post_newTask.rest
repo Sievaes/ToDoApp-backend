@@ -1,11 +1,10 @@
 POST http://localhost:3001/api/tasks
 Content-Type: application/json
 
-
 {
     "task": "test task",
     "description": "test description",
-    "priority": "low",
+    "priority": 3,
     "completed": false,
     "subTasks": [
         {
@@ -13,8 +12,8 @@ Content-Type: application/json
             "completed": false
         },
         {
-        "task": "test subTask2",
-        "completed": false
+            "task": "test subTask2",
+            "completed": false
         }
     ]
 }

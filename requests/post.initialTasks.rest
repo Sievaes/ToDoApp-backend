@@ -16,7 +16,7 @@ Content-Type: application/json
     "task": "Grocery shopping",
     "description": "Buy groceries for the week",
     "priority": 1,
-    "completed": false,
+    "completed": true,
     "subTasks": [
       { "task": "Buy vegetables", "completed": false },
       { "task": "Buy fruits", "completed": false }
@@ -26,7 +26,7 @@ Content-Type: application/json
     "task": "Project meeting",
     "description": "Discuss project milestones",
     "priority": 2,
-    "completed": false,
+    "completed": true,
     "subTasks": [
       { "task": "Prepare presentation", "completed": false },
       { "task": "Send meeting invite", "completed": false }
@@ -57,9 +57,7 @@ Content-Type: application/json
     "description": "Read a new book",
     "priority": 3,
     "completed": false,
-    "subTasks": [
-
-    ]
+    "subTasks": []
   },
   {
     "task": "Gardening",
@@ -76,8 +74,86 @@ Content-Type: application/json
     "description": "Prepare for upcoming exams",
     "priority": 1,
     "completed": false,
+    "subTasks": []
+  },
+  {
+    "task": "Cook dinner",
+    "description": "Prepare a healthy dinner",
+    "priority": 2,
+    "completed": false,
     "subTasks": [
-
+      { "task": "Chop vegetables", "completed": false },
+      { "task": "Cook rice", "completed": false }
+    ]
+  },
+  {
+    "task": "Laundry",
+    "description": "Do the laundry",
+    "priority": 2,
+    "completed": false,
+    "subTasks": [
+      { "task": "Wash clothes", "completed": false },
+      { "task": "Dry clothes", "completed": false }
+    ]
+  },
+  {
+    "task": "Write blog post",
+    "description": "Write a new blog post",
+    "priority": 3,
+    "completed": false,
+    "subTasks": [
+      { "task": "Research topic", "completed": false },
+      { "task": "Draft post", "completed": false }
+    ]
+  },
+  {
+    "task": "Plan vacation",
+    "description": "Plan the upcoming vacation",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+      { "task": "Book flights", "completed": false },
+      { "task": "Reserve hotel", "completed": false }
+    ]
+  },
+  {
+    "task": "Organize closet",
+    "description": "Organize the closet",
+    "priority": 2,
+    "completed": false,
+    "subTasks": [
+      { "task": "Sort clothes", "completed": false },
+      { "task": "Donate unused items", "completed": false }
+    ]
+  },
+  {
+    "task": "Pay bills",
+    "description": "Pay monthly bills",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+      { "task": "Pay electricity bill", "completed": false },
+      { "task": "Pay water bill", "completed": false }
+    ]
+  },
+  {
+    "task": "Clean garage",
+    "description": "Clean and organize the garage",
+    "priority": 3,
+    "completed": false,
+    "subTasks": [
+      { "task": "Sweep floor", "completed": false },
+      { "task": "Organize tools", "completed": false }
+    ]
+  },
+  {
+    "task": "Call family",
+    "description": "Call family members",
+    "priority": 1,
+    "completed": false,
+    "subTasks": [
+      { "task": "Call mom", "completed": false },
+      { "task": "Call dad", "completed": false }
     ]
   }
 ]

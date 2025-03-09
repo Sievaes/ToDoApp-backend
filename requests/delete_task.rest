@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/tasks/67cd881a6129e94be3ee05f6
