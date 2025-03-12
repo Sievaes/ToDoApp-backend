@@ -1,6 +1,8 @@
 const config = require("./utils/config")
 const express = require("express")
 const app = express()
+const loginRouter = require("./controllers/login")
+const userRouter = require("./controllers/users")
 const tasksRouter = require("./controllers/tasks")
 const mongoose = require("mongoose")
 const cors = require("cors")
@@ -22,7 +24,11 @@ app.use(cors())
 app.use(express.json())
 
 app.use(middleware.requestLogger)
+app.use(middleware.tokenExtractor)
+app.use(middleware.userExtractor)
 
+app.use("/api/login", loginRouter)
+app.use("/api/users", userRouter)
 app.use("/api/tasks", tasksRouter)
 
 app.use(middleware.errorHandler)

@@ -1,6 +1,8 @@
 const tasksRouter = require("express").Router()
 const logger = require("../utils/logger")
+const jwt = require("jsonwebtoken")
 const Task = require("../models/task")
+const User = require("../models/user")
 
 //GET tasks
 tasksRouter.get("/", async (req, res, next) => {
@@ -15,15 +17,34 @@ tasksRouter.get("/", async (req, res, next) => {
 //POST new task
 tasksRouter.post("/", async (req, res, next) => {
   try {
+    const { task, description, priority, completed, subTasks } = req.body
+
+    const token = req.token
+
+    if (!token) {
+      res.status(401).json({ error: "token missing" })
+    }
+
+    const decodedToken = jwt.verify(req.token, process.env.SECRET)
+
+    if (!decodedToken) {
+      res.status(401).json({ error: "invalid token" })
+    }
+
+    const user = req.user
+
     const newTask = new Task({
-      task: req.body.task,
-      description: req.body.description,
-      priority: req.body.priority,
-      completed: req.body.completed,
-      subTasks: req.body.subTasks,
+      task: task,
+      description: description,
+      priority: priority,
+      completed: completed,
+      subTasks: subTasks,
+      user: user.id,
     })
 
     const savedTask = await newTask.save()
+    user.tasks = user.tasks.concat(savedTask._id)
+    await user.save()
     res.status(201).json(savedTask)
   } catch (error) {
     next(error)
