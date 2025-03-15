@@ -10,7 +10,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Vacuum living room", "completed": false },
       { "task": "Dust shelves", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Grocery shopping",
@@ -20,7 +21,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Buy vegetables", "completed": false },
       { "task": "Buy fruits", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Project meeting",
@@ -30,7 +32,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Prepare presentation", "completed": false },
       { "task": "Send meeting invite", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Car maintenance",
@@ -40,7 +43,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Change oil", "completed": false },
       { "task": "Check tire pressure", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Workout",
@@ -50,14 +54,16 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Warm-up exercises", "completed": false },
       { "task": "Strength training", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Read a book",
     "description": "Read a new book",
     "priority": 3,
     "completed": false,
-    "subTasks": []
+    "subTasks": [],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Gardening",
@@ -67,14 +73,16 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Plant new flowers", "completed": false },
       { "task": "Water the plants", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Study for exams",
     "description": "Prepare for upcoming exams",
     "priority": 1,
     "completed": false,
-    "subTasks": []
+    "subTasks": [],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Cook dinner",
@@ -84,7 +92,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Chop vegetables", "completed": false },
       { "task": "Cook rice", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Laundry",
@@ -94,7 +103,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Wash clothes", "completed": false },
       { "task": "Dry clothes", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Write blog post",
@@ -104,7 +114,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Research topic", "completed": false },
       { "task": "Draft post", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Plan vacation",
@@ -114,7 +125,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Book flights", "completed": false },
       { "task": "Reserve hotel", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Organize closet",
@@ -124,7 +136,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Sort clothes", "completed": false },
       { "task": "Donate unused items", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Pay bills",
@@ -134,7 +147,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Pay electricity bill", "completed": false },
       { "task": "Pay water bill", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Clean garage",
@@ -144,7 +158,8 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Sweep floor", "completed": false },
       { "task": "Organize tools", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   },
   {
     "task": "Call family",
@@ -154,6 +169,7 @@ Content-Type: application/json
     "subTasks": [
       { "task": "Call mom", "completed": false },
       { "task": "Call dad", "completed": false }
-    ]
+    ],
+    "user": "67d2f8697f136afaaa23360d"
   }
 ]

@@ -7,7 +7,21 @@ const User = require("../models/user")
 //GET tasks
 tasksRouter.get("/", async (req, res, next) => {
   try {
-    const tasks = await Task.find({})
+    const token = req.token
+
+    if (!token) {
+      res.status(401).json({ error: "token missing" })
+    }
+
+    const decodedToken = jwt.verify(token, process.env.SECRET)
+
+    if (!decodedToken) {
+      res.status(401).json({ error: "invalid token" })
+    }
+
+    const user = await User.findById(decodedToken.id)
+
+    const tasks = await Task.find({ user: user.id })
     res.status(200).json(tasks)
   } catch (error) {
     next(error)
@@ -64,6 +78,18 @@ tasksRouter.post("/init", async (req, res, next) => {
 // DELETE task
 tasksRouter.delete("/:id", async (req, res, next) => {
   try {
+    const token = req.token
+
+    if (!token) {
+      res.status(401).json({ error: "token missing" })
+    }
+
+    const decodedToken = jwt.verify(req.token, process.env.SECRET)
+
+    if (!decodedToken) {
+      res.status(401).json({ error: "invalid token" })
+    }
+
     const response = await Task.findByIdAndDelete(req.params.id)
     if (response) {
       res.status(204).end()
